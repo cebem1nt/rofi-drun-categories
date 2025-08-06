@@ -12,8 +12,6 @@ if [ "${USER_ENTRIES[0]}" == "$HOME/.local/share/applications/*.desktop" ]; then
     USER_ENTRIES=()
 fi
 
-DEFAULT_ICON_NAME="!PUT_ME_LATER!"
-
 extract_icon() {
     local file="$1"
     # rofi seems to be able to fin icon by itself
