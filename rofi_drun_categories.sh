@@ -16,9 +16,8 @@ DEFAULT_ICON_NAME="!PUT_ME_LATER!"
 
 extract_icon() {
     local file="$1"
-    local icon_name=$(grep -E '^Icon=' "$file" | cut -d'=' -f2)
-
-    echo $(gtk-update-icon-cache --get-icon-path "$icon_name")
+    # rofi seems to be able to fin icon by itself
+    echo $(grep -E '^Icon=' "$file" | cut -d'=' -f2)
 }
 
 
